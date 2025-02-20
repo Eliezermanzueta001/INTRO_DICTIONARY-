@@ -1,0 +1,131 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos Generales */
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #dbeafe;
+}
+
+/* Contenedor principal */
+.menu-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Menú lateral */
+.sidebar {
+  background: #678ef2;
+  color: white;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  left: -250px;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de menú animado (Tornado) */
+#menuToggle {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 100;
+}
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  cursor: pointer;
+  display: block;
+  height: calc(4px * 3 + 11px * 2);
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: #7b52b9;
+  transition: all 0.35s cubic-bezier(.5,-0.35,.35,1.5);
+}
+
+.bar--top {
+  bottom: calc(50% + 11px + 2px);
+  transition-property: bottom, transform;
+  transition-delay: 0.2s;
+}
+
+.bar--middle {
+  top: calc(50% - 2px);
+  transition-property: opacity, transform;
+  transition-delay: 0.1s;
+}
+
+.bar--bottom {
+  top: calc(50% + 11px + 2px);
+  transition-property: top, transform;
+  transition-delay: 0s;
+}
+
+/* Cuando el checkbox está activado */
+#checkbox:checked + .toggle .bar--top {
+  transform: rotate(-135deg);
+  bottom: calc(50% - 2px);
+}
+
+#checkbox:checked + .toggle .bar--middle {
+  opacity: 0;
+  transform: rotate(-135deg);
+}
+
+#checkbox:checked + .toggle .bar--bottom {
+  top: calc(50% - 2px);
+  transform: rotate(-225deg);
+}
+
+/* Contenido Principal */
+.content {
+  margin-left: 20px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Mostrar el menú al hacer clic */
+.sidebar.active {
+  left: 0;
+}

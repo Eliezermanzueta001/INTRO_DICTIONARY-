@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="menu-container">
+        <!-- Botón de Menú -->
+        <div id="menuToggle">
+            <input id="checkbox" type="checkbox">
+            <label class="toggle" for="checkbox">
+                <div class="bar bar--top"></div>
+                <div class="bar bar--middle"></div>
+                <div class="bar bar--bottom"></div>
+            </label>
+        </div>
+
+        <!-- Menú lateral -->
+        <nav class="sidebar">
+            <h2>Introducción al Diccionario</h2>
+            <ul>
+                <li><i class="fas fa-user"></i> Acceso</li>
+                <li><i class="fas fa-star"></i> Favoritos</li>
+                <li><i class="fas fa-th-large"></i> Categorías</li>
+                <li><i class="fas fa-cog"></i> Ajustes</li>
+                <li><i class="fas fa-question-circle"></i> Ayuda</li>
+            </ul>
+        </nav>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>Bienvenido al Diccionario</h1>
+            <p>Explora palabras y definiciones fácilmente.</p>
+        </main>
+    </div>
+
+</body>
+</html>

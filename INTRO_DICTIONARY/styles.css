@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 773px; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+}
+
+/* Barra de navegación principal */
+.navegar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    background: #3674b5;
+    color: white;
+}
+
+/* Barra de búsqueda */
+.navegar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #578FCA;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 650px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+}
+
+/* Barra de búsqueda */
+.busqueda {
+    flex: 1;
+    margin-left: 215px;
+    padding: 8px;
+    border: none;
+    border-radius:0;
+    font-size: 16px;
+    width: 250px;
+    font-family: "Poppins", sans-serif;
+    
+}
+#buscar{
+    margin-right: 300px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    padding: 14px;
+
+}
+
+/* Botones y opciones */
+.seccion-derecha {
+    display: flex;
+    align-items: center;
+}
+
+#seleccionar-idioma {
+    padding: 5px;
+    border-radius: none;
+    margin-right: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.tema {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+  }
+  
+  .tema input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  
+  .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* .tema:hover */.sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .tema:hover */.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+   
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-10deg);
+    }
+  
+    75% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+
+.btn-singup{
+    padding: 8px 15px;
+    background: white;
+    color: #3674b5;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    margin-right: 5px;
+}
+
+.btn-singup:hover{
+    background: #0056b3;
+    color: white;
+}
+.btn-login,
+.btn-singup {
+    padding: 8px 15px;
+    background: white;
+    color: #3674b5;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    margin-right: 5px;
+}
+
+.btn-login:hover,
+.btn-singup:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* Estilos para modo oscuro */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .navegar {
+    background-color: #111;
+}
+
+.dark-mode .navegar2 {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .busqueda {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .sugerencias {
+    background: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+.dark-mode .sugerencias li:hover {
+    background: #555;
+}
+
+.dark-mode .btn-login,
+.dark-mode .btn-singup {
+    background: #444;
+    color: white;
+}
+
+.dark-mode .btn-login:hover,
+.dark-mode .btn-singup:hover {
+    background: #666;
+}
+
+#palabra{
+    color: #3674b5;
+    font-family: "poppins", sans-serif;
+    margin-top: 5%;
+    margin-left: 150px;   
+    font-size: 350%;
+    font-weight: 700;
+    font-weight: bold;
+}
+
+#palabra:hover{
+    text-decoration:underline;
+    color: #578FCA;
+    font-weight: 700;
+    font-family: "poppins", sans-serif;
+}
+
+#pronunciacion{
+    margin-left: 125px;
+    font-family: "poppins", sans-serif;
+}
+
+#ejemplo{
+    color: rgb(0, 0, 0);
+    margin-left: 140px;
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 150px;
+    text-align: justify;
+}
+
+
+#resultado{
+    color: #000;
+    margin-left: 115px;
+    list-style:decimal;
+    font-family: "poppins", sans-serif;
+    font-size: 22px;
+    text-align:justify;
+    margin-right:150px ;
+    line-height: 60px;
+}
+
+.dark-mode #resultado{
+    color: white;
+}
+
+.dark-mode #ejemplo{
+    color:white
+}
+
+/* Estilos para sugerencias */
+.sugerencias {
+    position: absolute;
+    width: 729px;
+    background: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin-top: 240px;
+    margin-left: 211px;
+    display: none;
+}
+
+.sugerencias li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.sugerencias li:hover {
+    background: #f0f0f0;
+}
+
+/* Ajustes del menú y logo */
+.diccionario {
+    margin-left: 20px;
+}
+
+.icon-menu {
+    --gap: 5px;
+    --height-bar: 2.5px;
+    --pos-y-bar-one: 0;
+    --pos-y-bar-three: 0;
+    --scale-bar: 1;
+    --rotate-bar-one: 0;
+    --rotate-bar-three: 0;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .bar {
+    position: relative;
+    height: var(--height-bar);
+    width: 100%;
+    border-radius: .5rem;
+    background-color: #ffffff;
+  }
+  
+  .bar--1 {
+    top: var(--pos-y-bar-one);
+    transform: rotate(var(--rotate-bar-one));
+    transition: top 200ms 100ms, transform 100ms;
+  }
+  
+  .bar--2 {
+    transform: scaleX(var(--scale-bar));
+    transition: transform 150ms 100ms;
+  }
+  
+  .bar--3 {
+    bottom: var(--pos-y-bar-three);
+    transform: rotate(var(--rotate-bar-three));
+    transition: bottom 200ms 100ms, transform 100ms;
+  }
+  
+  .check-icon:checked + .icon-menu > .bar--1 {
+    transition: top 200ms, transform 200ms 100ms;
+  }
+  
+  .check-icon:checked + .icon-menu > .bar--3 {
+    transition: bottom 200ms, transform 200ms 100ms;
+  }
+  
+  .check-icon:checked + .icon-menu {
+    --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+    --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+    --scale-bar: 0;
+    --rotate-bar-one: 45deg;
+    --rotate-bar-three: -45deg;
+  }
+  /* FIN ICON-MENU */
+  
+  
+  
+#todo{
+  margin-top: 500px;
+  display: flex;
+align-content: center;
+}
+#h2{
+  margin-top: 800px;
+  font-size: 35px;
+}
+
+.fff{
+  text-decoration: none;
+  color: #000;
+}
+
+.videos {
+    background-color: none;
+    float: right;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.videos a{
+    font-family: "poppins", sans-serif;
+    text-decoration: none;
+    color:black;
+}
+
+h2{
+    font-family: "poppins", sans-serif;
+    text-align: center;
+
+}
+
+footer{
+    background-color: #578FCA;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* From Uiverse.io by wilsondesouza */ 
+ul {
+    list-style: none;
+  }
+  
+  .example-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="linkedin"] .filled,
+  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+  }
+  
+  .example-2 .icon-content a[data-social="github"] .filled,
+  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+  }
+  
+
+/* ====== MODO OSCURO ====== */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .navegar {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode .navegar2 {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.dark-mode .busqueda {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode .sugerencias {
+    background: #333;
+    color: white;
+    border: 1px solid #777;
+}
+
+.dark-mode .sugerencias li:hover {
+    background: #555;
+}
+
+.dark-mode .btn-login,
+.dark-mode .btn-singup {
+    background: #444;
+    color: white;
+}
+
+.dark-mode .btn-login:hover,
+.dark-mode .btn-singup:hover {
+    background: #666;
+}
+
+.dark-mode .videos {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.dark-mode footer {
+    background-color: #111;
+    color: white;
+}
+
+.dark-mode a:hover {
+    color: #ddd;
+}
+
+.dark-mode .videos a,
+.dark-mode .videos a p {
+    color: white !important;
+}
+
+.dark-mode .videos a:hover,
+.dark-mode .videos a p:hover {
+    color: #ddd !important;
+}
+
+
+.dark-mode footer p span {
+    color: white;
+}
+
+.dark-mode footer p a {
+    color: white;
+}
+
+.dark-mode footer p a:hover {
+    color: #ddd;
+}
+
+.información{
+    margin-left:100px; 
+    margin-right: 500px;
+    width: 100px;
+}
+

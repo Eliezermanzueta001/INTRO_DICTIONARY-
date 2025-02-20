@@ -1,0 +1,176 @@
+/* Centrar el formulario en la pantalla */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background-color: #f4f4f4; /* Color de fondo opcional */
+    margin: 0;
+    padding: 10px; /* Para evitar que el formulario quede pegado en pantallas pequeñas */
+}
+
+/* Estilos del formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del título */
+.title {
+    font-size: 28px;
+    color: #578FCA;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #578FCA;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+    background-color: #578FCA;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+/* Estilos generales de texto */
+.message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: #578FCA;
+}
+
+.signin a:hover {
+    text-decoration: underline #578FCA;
+}
+
+/* Estilo de los inputs */
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.form label .input:valid + span {
+    color: green;
+}
+
+/* Botón de enviar */
+.submit {
+    border: none;
+    outline: none;
+    background-color: #578FCA;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.submit:hover {
+    background-color: rgb(56, 90, 194);
+}
+
+/* Animación del título */
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* 📱 RESPONSIVE DESIGN - Ajustes para móviles 📱 */
+@media (max-width: 400px) {
+    .form {
+        width: 90%; /* Hace que el formulario se ajuste mejor en pantallas pequeñas */
+    }
+
+    .flex {
+        flex-direction: column; /* Cambia de dos columnas a una en móviles */
+    }
+}
+
+
+.btn-register{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background-color: #578FCA;
+    padding: 10px;
+    border-radius: 50px;
+    width: 310px;
+    margin-left: 17px;
+}
+
+.btn-register:hover{
+    background-color: #3674b5;
+}

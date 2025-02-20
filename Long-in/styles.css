@@ -1,0 +1,198 @@
+/* Centrar el formulario en la pantalla */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background-color: #121212; /* Color de fondo oscuro */
+    margin: 0;
+    padding: 10px; /* Evita que quede pegado a los bordes en móviles */
+}
+
+/* Estilos del formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+}
+
+/* Estilos del título */
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #3674b5;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #3674b5;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+/* Texto informativo */ 
+.signin {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.message{
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.signin a {
+    color: #3674b5;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor de los inputs */
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+/* Estilos de los inputs */
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 15px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.5);
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form label .input + span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+    color: #3674b5;
+    top: 5px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+/* Botón de enviar */
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s ease;
+    background-color: #3674b5;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: rgba(0, 191, 255, 0.7);
+}
+
+/* Animación del título */
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+/* 📱 RESPONSIVE DESIGN - Ajustes para móviles 📱 */
+@media (max-width: 400px) {
+    .form {
+        width: 90%;
+    }
+
+    .flex {
+        flex-direction: column; /* Apila los campos en móviles */
+    }
+}
+
+
+.btn-login{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background-color: #2f7aca;
+    padding: 10px;
+    border-radius: 50px;
+    width: 310px;
+    margin-left: 17px;
+}
+
+.btn-login:hover{
+    background-color: #3673b5d0;
+}
+
+#message {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #7b52b9;
+    width: 0;
+    font-size: 19px;
+    font-family: "poppins", sans-serif;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+    text-align: center;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
